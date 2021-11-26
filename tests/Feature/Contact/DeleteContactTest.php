@@ -46,7 +46,7 @@ class DeleteContactTest extends FeatureCase
 
         Sanctum::actingAs($user);
 
-        $route = url()->route('contact.delete', ['contact' => 876]);
+        $route = url()->route('contact.delete', ['contact' => 'c2']);
 
         $response = $this->delete($route);
         $response->assertStatus(Response::HTTP_NOT_FOUND);
