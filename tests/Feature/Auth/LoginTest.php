@@ -27,5 +27,12 @@ class LoginTest extends FeatureCase
 
         $response->assertStatus(Response::HTTP_OK);
         $response->assertJsonStructure(['data' => ['access_token']]);
+
+        $response = $this->post($route, [
+            'email' => $data['email'],
+            'password' => 'invalid_password'
+        ]);
+
+        $response->assertStatus(Response::HTTP_UNAUTHORIZED);
     }
 }

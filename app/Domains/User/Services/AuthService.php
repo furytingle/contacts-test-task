@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Domains\User\Services;
 
 use App\Domains\User\DTO\UserLoginDTO;
+use App\Domains\User\Exceptions\LoginException;
 use App\Domains\User\Repositories\UserReadRepositoryInterface;
 use App\Models\User;
-use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\Hash;
 
 class AuthService implements AuthServiceInterface
@@ -21,7 +21,7 @@ class AuthService implements AuthServiceInterface
         $user = $this->readRepository->findUser($dto);
 
         if (!Hash::check($dto->password->getValue(), $user->password)) {
-            throw new AuthorizationException();
+            throw new LoginException();
         }
 
         return $user;
