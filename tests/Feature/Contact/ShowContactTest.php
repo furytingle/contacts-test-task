@@ -18,7 +18,7 @@ class ShowContactTest extends FeatureCase
 
     public function testShowContact(): void
     {
-        $user = $this->makeUser();
+        $user = $this->createUser();
         Sanctum::actingAs($user);
 
         /** @var Contact $contact */
@@ -37,7 +37,7 @@ class ShowContactTest extends FeatureCase
 
     public function testShowContactNotFound(): void
     {
-        $user = $this->makeUser();
+        $user = $this->createUser();
         Sanctum::actingAs($user);
 
         $route = url()->route('contact.show', ['contact' => 'c1']);

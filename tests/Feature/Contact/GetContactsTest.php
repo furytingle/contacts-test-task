@@ -16,7 +16,7 @@ class GetContactsTest extends FeatureCase
 
     public function testGetContacts(): void
     {
-        $user = $this->makeUser();
+        $user = $this->createUser();
         Sanctum::actingAs($user);
 
         Contact::factory()->count(25)->create();

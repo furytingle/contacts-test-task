@@ -18,7 +18,7 @@ class DeleteContactTest extends FeatureCase
 
     public function testDeleteContact(): void
     {
-        $user = $this->makeUser();
+        $user = $this->createUser();
         $user->givePermissionTo('delete contacts');
 
         Sanctum::actingAs($user);
@@ -41,7 +41,7 @@ class DeleteContactTest extends FeatureCase
 
     public function testDeleteContactNotFound(): void
     {
-        $user = $this->makeUser();
+        $user = $this->createUser();
         $user->givePermissionTo('delete contacts');
 
         Sanctum::actingAs($user);

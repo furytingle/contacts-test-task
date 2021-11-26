@@ -9,7 +9,7 @@ use Tests\TestCase;
 
 class FeatureCase extends TestCase
 {
-    protected function makeUser(): User
+    protected function createUser(): User
     {
         /** @var User $user */
         $user = User::factory()->create();

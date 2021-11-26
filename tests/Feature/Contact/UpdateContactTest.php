@@ -16,7 +16,7 @@ class UpdateContactTest extends FeatureCase
 
     public function testUpdateContact(): void
     {
-        $user = $this->makeUser();
+        $user = $this->createUser();
         $user->givePermissionTo('edit contacts');
 
         Sanctum::actingAs($user);
@@ -41,7 +41,7 @@ class UpdateContactTest extends FeatureCase
 
     public function testUpdateContactInvalid(): void
     {
-        $user = $this->makeUser();
+        $user = $this->createUser();
         $user->givePermissionTo('edit contacts');
 
         Sanctum::actingAs($user);
