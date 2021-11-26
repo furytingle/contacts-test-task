@@ -12,7 +12,7 @@ class FeatureCase extends TestCase
     protected function makeUser(): User
     {
         /** @var User $user */
-        $user = User::factory()->make();
+        $user = User::factory()->create();
         $user->givePermissionTo('read contacts');
 
         return $user;
