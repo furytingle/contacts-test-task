@@ -9,7 +9,7 @@ use App\Domains\Contact\ValueObjects\GetContacts\PerPageNumber;
 use App\Http\Requests\Contact\GetContactsRequest;
 use Spatie\DataTransferObject\DataTransferObject;
 
-class GetContactsDTO extends DataTransferObject
+final class GetContactsDTO extends DataTransferObject
 {
     private const PAGE = 1;
 

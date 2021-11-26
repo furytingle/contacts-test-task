@@ -9,7 +9,7 @@ use App\Domains\Contact\ValueObjects\Update\UpdateContactName;
 use App\Http\Requests\Contact\UpdateContactRequest;
 use Spatie\DataTransferObject\DataTransferObject;
 
-class UpdateContactDTO extends DataTransferObject
+final class UpdateContactDTO extends DataTransferObject
 {
     public UpdateContactName $name;
 

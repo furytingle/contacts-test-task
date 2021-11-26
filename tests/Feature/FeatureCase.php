@@ -9,10 +9,10 @@ use Tests\TestCase;
 
 class FeatureCase extends TestCase
 {
-    protected function createUser(): User
+    protected function createUser($attributes = []): User
     {
         /** @var User $user */
-        $user = User::factory()->create();
+        $user = User::factory()->create($attributes);
         $user->givePermissionTo('read contacts');
 
         return $user;

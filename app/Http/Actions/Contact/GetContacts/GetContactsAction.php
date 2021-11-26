@@ -11,7 +11,7 @@ use App\Http\Requests\Contact\GetContactsRequest;
 use App\Http\Resources\Contact\ContactResource;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
-class GetContactsAction extends Controller
+final class GetContactsAction extends Controller
 {
     public function __construct(private ContactService $contactService)
     {

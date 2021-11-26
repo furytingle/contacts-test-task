@@ -9,7 +9,7 @@ use App\Domains\Contact\ValueObjects\Create\CreateContactName;
 use App\Http\Requests\Contact\CreateContactRequest;
 use Spatie\DataTransferObject\DataTransferObject;
 
-class CreateContactDTO extends DataTransferObject
+final class CreateContactDTO extends DataTransferObject
 {
     public CreateContactName $name;
 

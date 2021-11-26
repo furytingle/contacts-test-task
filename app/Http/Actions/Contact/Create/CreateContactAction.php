@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Contact\CreateContactRequest;
 use App\Http\Resources\Contact\ContactResource;
 
-class CreateContactAction extends Controller
+final class CreateContactAction extends Controller
 {
     public function __construct(private ContactService $contactService)
     {

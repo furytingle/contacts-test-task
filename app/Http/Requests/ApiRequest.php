@@ -19,7 +19,12 @@ class ApiRequest extends FormRequest
         ], Response::HTTP_UNPROCESSABLE_ENTITY));
     }
 
-    public function authorize()
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    public function expectsJson(): bool
     {
         return true;
     }

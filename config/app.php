@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Domains\Contact\Providers\ContactServiceProvider::class,
+        App\Domains\User\Providers\UserServiceProvider::class,
     ],
 
     /*

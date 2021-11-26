@@ -11,7 +11,7 @@ use App\Mail\ContactDeleted;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 
-class DeleteContactAction extends Controller
+final class DeleteContactAction extends Controller
 {
     public function __construct(private ContactService $contactService)
     {

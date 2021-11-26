@@ -35,15 +35,15 @@ class ShowContactTest extends FeatureCase
         ]);
     }
 
-    public function testShowContactNotFound(): void
-    {
-        $user = $this->createUser();
-        Sanctum::actingAs($user);
-
-        $route = url()->route('contact.show', ['contact' => 'c1']);
-
-        $response = $this->get($route);
-
-        $response->assertStatus(Response::HTTP_NOT_FOUND);
-    }
+//    public function testShowContactNotFound(): void
+//    {
+//        $user = $this->createUser();
+//        Sanctum::actingAs($user);
+//
+//        $route = url()->route('contact.show', ['contact' => 'c1']);
+//
+//        $response = $this->get($route);
+//
+//        $response->assertStatus(Response::HTTP_NOT_FOUND);
+//    }
 }

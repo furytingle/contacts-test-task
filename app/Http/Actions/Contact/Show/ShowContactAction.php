@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\Contact\ContactResource;
 use App\Models\Contact;
 
-class ShowContactAction extends Controller
+final class ShowContactAction extends Controller
 {
     public function __invoke(Contact $contact): ContactResource
     {

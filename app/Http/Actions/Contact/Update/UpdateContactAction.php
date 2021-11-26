@@ -11,7 +11,7 @@ use App\Http\Requests\Contact\UpdateContactRequest;
 use App\Http\Resources\Contact\ContactResource;
 use App\Models\Contact;
 
-class UpdateContactAction extends Controller
+final class UpdateContactAction extends Controller
 {
     public function __construct(private ContactService $contactService)
     {
