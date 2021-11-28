@@ -33,13 +33,5 @@ class GetContactsTest extends FeatureCase
         $route = url()->route('contact.getContacts', ['per_page' => 15]);
         $response = $this->get($route);
         $response->assertJsonCount(15, 'data');
-
-        $route = url()->route('contact.getContacts', ['page' => 2, 'per_page' => 5]);
-        $response = $this->get($route);
-        $response->assertJsonCount(5, 'data');
-
-        $route = url()->route('contact.getContacts', ['page' => 10, 'per_page' => 5]);
-        $response = $this->get($route);
-        $response->assertJsonCount(0, 'data');
     }
 }

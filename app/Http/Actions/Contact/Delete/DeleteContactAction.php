@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Actions\Contact\Delete;
 
-use App\Domains\Contact\Services\ContactService;
+use App\Domains\Contact\Services\ContactServiceInterface;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\DeletedResource;
 use App\Mail\ContactDeleted;
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Mail;
 
 final class DeleteContactAction extends Controller
 {
-    public function __construct(private ContactService $contactService)
+    public function __construct(private ContactServiceInterface $contactService)
     {
     }
 

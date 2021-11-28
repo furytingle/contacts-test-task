@@ -12,7 +12,7 @@ use App\Domains\Contact\Repositories\ContactWriteRepositoryInterface;
 use App\Models\Contact;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-class ContactService
+class ContactService implements ContactServiceInterface
 {
     public function __construct(
         protected ContactReadRepositoryInterface $readRepository,
